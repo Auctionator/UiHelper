@@ -1,0 +1,13 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Button name="UiHelperTabButton" mixin="UiHelperTabButtonMixin" inherits="CharacterFrameTabButtonTemplate" virtual="true">
+    <!--
+      <KeyValues>
+        <KeyValue key="activatedFrameName" value="" type="global" />
+      </KeyValues>
+    -->
+    <Scripts>
+      <OnLoad method="OnLoad" />
+      <OnClick method="OnClick" />
+    </Scripts>
+  </Button>
+</Ui>

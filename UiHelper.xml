@@ -1,0 +1,64 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Frame
+    name="UiHelperFrame"
+    mixin="UiHelperFrameMixin"
+
+    movable="true"
+    enableMouse="true"
+
+    inherits="SimplePanelTemplate"
+    parent="UIParent"
+  >
+    <Size x="800" y="500" />
+
+    <Anchors>
+      <Anchor point="CENTER" />
+    </Anchors>
+
+    <Scripts>
+      <OnLoad method="OnLoad" />
+      <OnDragStart method="OnDragStart" />
+      <OnDragStop method="OnDragStop" />
+    </Scripts>
+
+    <Frames>
+      <!-- Tabs -->
+      <Button name="$parentTab1" inherits="UiHelperTabButton" text="Colors" parentKey="ColorsTab">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="BOTTOMLEFT" y="3" />
+        </Anchors>
+
+        <Frames>
+          <Frame inherits="UiHelperColorFrame" />
+        </Frames>
+      </Button>
+
+      <Button name="$parentTab2" inherits="UiHelperTabButton" text="Fonts" parentKey="FontsTab">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeKey="$parent.ColorsTab" relativePoint="TOPRIGHT" />
+        </Anchors>
+        <Frames>
+          <Frame inherits="UiHelperFontFrame"/>
+        </Frames>
+      </Button>
+
+      <Button name="$parentTab3" inherits="UiHelperTabButton" text="Buttons" parentKey="ButtonsTab">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeKey="$parent.FontsTab" relativePoint="TOPRIGHT" />
+        </Anchors>
+        <Frames>
+          <Frame inherits="UiHelperButtonFrame"/>
+        </Frames>
+      </Button>
+
+      <Button name="$parentTab4" inherits="UiHelperTabButton" text="Textures" parentKey="TexturesTab">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeKey="$parent.ButtonsTab" relativePoint="TOPRIGHT" />
+        </Anchors>
+        <Frames>
+          <Frame inherits="UiHelperTextureFrame"/>
+        </Frames>
+      </Button>
+    </Frames>
+  </Frame>
+</Ui>

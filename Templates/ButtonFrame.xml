@@ -1,0 +1,29 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Frame name="UiHelperButtonFrame" mixin="UiHelperButtonGenerator" inherits="UiHelperTabContentFrame" virtual="true">
+    <KeyValues>
+      <KeyValue key="title" value="Button Listing" type="string"/>
+    </KeyValues>
+
+    <Scripts>
+      <OnLoad method="OnLoad" />
+    </Scripts>
+
+    <Frames>
+      <ScrollFrame parentKey="ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeKey="$parent.Inset" relativePoint="TOPLEFT"/>
+          <Anchor point="BOTTOMRIGHT" relativeKey="$parent.Inset" relativePoint="BOTTOMRIGHT" x="-18"/>
+        </Anchors>
+        <ScrollChild>
+          <Frame parentKey="ButtonListingFrame" />
+        </ScrollChild>
+      </ScrollFrame>
+
+      <Button inherits="UIPanelDynamicResizeButtonTemplate" text="UnHide" parentKey="UndoCloseButton">
+        <Anchors>
+          <Anchor point="TOPRIGHT" relativeKey="$parent.Inset" relativePoint="BOTTOMRIGHT" y="-5" />
+        </Anchors>
+      </Button>
+    </Frames>
+  </Frame>
+</Ui>

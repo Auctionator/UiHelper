@@ -1,0 +1,9 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Script file="TabContentFrame.lua" />
+  <Script file="TabButton.lua"/>
+
+  <Script file="ColorGenerator.lua" />
+  <Script file="FontGenerator.lua" />
+  <Script file="ButtonGenerator.lua" />
+  <Script file="TextureGenerator.lua" />
+</Ui>

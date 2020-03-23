@@ -1,0 +1,24 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Frame name="UiHelperColorFrame" mixin="UiHelperColorGenerator" inherits="UiHelperTabContentFrame" virtual="true">
+    <KeyValues>
+      <KeyValue key="title" value="Color Listing" type="string" />
+    </KeyValues>
+
+    <Scripts>
+      <OnLoad method="OnLoad" />
+    </Scripts>
+
+    <Frames>
+      <ScrollFrame parentKey="ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeKey="$parent.Inset" relativePoint="TOPLEFT" />
+          <Anchor point="BOTTOMRIGHT" relativeKey="$parent.Inset" relativePoint="BOTTOMRIGHT" x="-18" />
+        </Anchors>
+
+        <ScrollChild>
+          <Frame parentKey="ColorListingFrame" />
+        </ScrollChild>
+      </ScrollFrame>
+    </Frames>
+  </Frame>
+</Ui>

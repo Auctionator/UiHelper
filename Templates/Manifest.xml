@@ -1,0 +1,10 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Include file="TabContentFrame.xml"/>
+
+  <Include file="ColorFrame.xml"/>
+  <Include file="FontFrame.xml"/>
+  <Include file="ButtonFrame.xml"/>
+  <Include file="TextureFrame.xml"/>
+
+  <Include file="TabButton.xml"/>
+</Ui>

@@ -1,0 +1,23 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Frame name="UiHelperTextureFrame" mixin="UiHelperTextureGenerator" inherits="UiHelperTabContentFrame" virtual="true">
+    <KeyValues>
+      <KeyValue key="title" value="Texture Listing (From SharedUIPanelTemplates)" type="string"/>
+    </KeyValues>
+
+    <Scripts>
+      <OnLoad method="OnLoad" />
+    </Scripts>
+
+    <Frames>
+      <ScrollFrame parentKey="ScrollFrame" inherits="UIPanelScrollFrameTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeKey="$parent.Inset" relativePoint="TOPLEFT"/>
+          <Anchor point="BOTTOMRIGHT" relativeKey="$parent.Inset" relativePoint="BOTTOMRIGHT" x="-18"/>
+        </Anchors>
+        <ScrollChild>
+          <Frame parentKey="TextureListingFrame"/>
+        </ScrollChild>
+      </ScrollFrame>
+    </Frames>
+  </Frame>
+</Ui>

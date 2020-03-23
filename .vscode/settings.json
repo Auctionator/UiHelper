@@ -1,0 +1,10 @@
+{
+    "Lua.diagnostics.globals": [
+        "UiHelperFrame",
+        "PanelTemplates_SetTab",
+        "PanelTemplates_SelectTab",
+        "PanelTemplates_SetNumTabs",
+        "CreateFrame",
+        "StaticPopupSpecial_Show"
+    ]
+}

@@ -1,0 +1,10 @@
+## Interface: 80300
+## Title: Auctionator
+## Version: 1.0
+## Author: Borjamacare
+
+Mixins\Manifest.xml
+Templates\Manifest.xml
+
+UiHelper.lua
+UiHelper.xml

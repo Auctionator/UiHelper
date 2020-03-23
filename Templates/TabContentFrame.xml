@@ -1,0 +1,23 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Frame name="UiHelperTabContentFrame" mixin="UiHelperTabContentMixin" parentKey="TabFrame" virtual="true">
+    <Anchors>
+      <Anchor point="TOPLEFT" relativeKey="$parent.$parent.Inset" relativePoint="TOPLEFT" x="5" y="-5"/>
+      <Anchor point="BOTTOMRIGHT" relativeKey="$parent.$parent.Inset" relativePoint="BOTTOMRIGHT" x="-5" y="5"/>
+    </Anchors>
+
+    <Layers>
+      <Layer level="BACKGROUND">
+        <FontString inherits="GameFontHighlight" parentKey="Title">
+          <Anchors>
+            <Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeKey="$parent" y="20"/>
+            <Anchor point="RIGHT" relativePoint="RIGHT" relativeKey="$parent"/>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+
+    <Scripts>
+      <OnLoad method="OnLoad" />
+    </Scripts>
+  </Frame>
+</Ui>
