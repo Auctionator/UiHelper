@@ -59,6 +59,15 @@
           <Frame inherits="UiHelperTextureFrame"/>
         </Frames>
       </Button>
+
+      <Button name="$parentTab5" inherits="UiHelperTabButton" text="Panels" parentKey="PanelsTab">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeKey="$parent.TexturesTab" relativePoint="TOPRIGHT" />
+        </Anchors>
+        <Frames>
+          <Frame inherits="UiHelperPanelFrame"/>
+        </Frames>
+      </Button>
     </Frames>
   </Frame>
 </Ui>

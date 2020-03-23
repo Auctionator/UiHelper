@@ -1,11 +1,11 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
-  <Frame name="UiHelperButtonFrame" mixin="UiHelperButtonGenerator" inherits="UiHelperTabContentFrame" virtual="true">
+  <Frame name="UiHelperPanelFrame" mixin="UiHelperPanelGenerator" inherits="UiHelperTabContentFrame" virtual="true">
     <KeyValues>
-      <KeyValue key="title" value="Button Listing" type="string"/>
+      <KeyValue key="title" value="Panels and Frames Listing (SharedUIPanelTemplates)" type="string"/>
     </KeyValues>
 
     <Scripts>
-      <OnLoad method="OnLoad" />
+      <OnLoad method="OnLoad"/>
     </Scripts>
 
     <Frames>
@@ -16,7 +16,7 @@
         </Anchors>
 
         <ScrollChild>
-          <Frame parentKey="ButtonListingFrame" />
+          <Frame parentKey="PanelListingFrame"/>
         </ScrollChild>
       </ScrollFrame>
     </Frames>

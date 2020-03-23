@@ -6,4 +6,5 @@
   <Script file="FontGenerator.lua" />
   <Script file="ButtonGenerator.lua" />
   <Script file="TextureGenerator.lua" />
+  <Script file="PanelGenerator.lua" />
 </Ui>

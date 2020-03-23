@@ -5,6 +5,7 @@
   <Include file="FontFrame.xml"/>
   <Include file="ButtonFrame.xml"/>
   <Include file="TextureFrame.xml"/>
+  <Include file="PanelFrame.xml"/>
 
   <Include file="TabButton.xml"/>
 </Ui>

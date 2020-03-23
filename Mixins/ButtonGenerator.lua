@@ -13,6 +13,10 @@ local BUTTON_TEMPLATES = {
     name = "UIPanelDynamicResizeButtonTemplate",
     shouldResize = true
   },
+  {
+    name = "TabButtonTemplate",
+    text = "(needs PanelTemplates_SetTab, etc. to work)"
+  },
   -- Can't get these to work...
   -- {
   --   name = "TruncatedButtonTemplate",
@@ -52,10 +56,23 @@ local BUTTON_TEMPLATES = {
   },
   {
     name = "SquareIconButtonTemplate",
+    hasKeys = "icon (string), iconAtlas (string), tooltipText (string), onClickHandler (global)"
   },
   {
     name = "RefreshButtonTemplate",
   },
+  {
+    name = "UIMenuButtonStretchTemplate",
+    shouldResize = true
+  },
+  -- This requires a relative parent frame '$parentDetails'
+  -- {
+  --   name = "UIGoldBorderButtonTemplate"
+  -- },
+  -- This one didnt want to work
+  -- {
+  --   name = "UIPanelButtonGrayTemplate"
+  -- }
 }
 
 local BUTTON_PADDING = 40
@@ -85,7 +102,7 @@ function UiHelperButtonGenerator:GenerateButtonFromTemplate(templateName, option
 
   local nameString = self.ScrollFrame.ButtonListingFrame:CreateFontString(nil, "ARTWORK")
   nameString:SetFont("Fonts\\ARIALN.ttf", 14, "OUTLINE")
-  nameString:SetText(templateName .. (options.text and options.text or ""))
+  nameString:SetText(templateName .. (options.text and options.text or "") .. (options.hasKeys and ("\nKeys: " .. options.hasKeys) or "" ))
   nameString:SetJustifyH("RIGHT")
 
   if button.text ~= nil then
