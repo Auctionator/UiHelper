@@ -70,4 +70,21 @@
       </Button>
     </Frames>
   </Frame>
+
+  <Button inherits="UIPanelDynamicResizeButtonTemplate" text="Toggle UIHelper" parent="UIParent">
+    <Anchors>
+      <Anchor point="BOTTOMRIGHT" relativeTo="UiHelperFrame" relativePoint="TOPRIGHT" />
+    </Anchors>
+
+    <Scripts>
+      <OnClick>
+        if UiHelperFrame:IsVisible() then
+          UiHelperFrame:Hide()
+        else
+          UiHelperFrame:Show()
+        end
+      </OnClick>
+    </Scripts>
+  </Button>
+
 </Ui>
